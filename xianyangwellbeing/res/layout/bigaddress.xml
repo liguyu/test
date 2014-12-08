@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/ajjh_bgimage">
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="18dp"
+        android:text=" 安检计划"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/tableRow1"
+        android:layout_width="330dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:text="用户地址"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableRow2"
+        android:layout_width="330dp"
+        android:layout_height="485dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="14dp" >
+
+        <ListView
+            android:id="@+id/listView4"
+            android:layout_width="330dp"
+            android:layout_height="485dp"
+            android:divider="#d0cece"
+            android:dividerHeight="1dp"
+            binding:clickedId="addressItemIdx"
+            binding:itemSource="addressList"
+            binding:itemTemplate="@layout/address" >
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableRow3"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="15dp" >
+
+        <!-- 状态栏，用于显示一天已安检多少用户，多少未安检 -->
+        <!-- 属于常驻标签，后面页面都要用到 -->
+
+                            <TextView
+                                android:id="@+id/lblInspectedNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="全部："
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txtTotalNum"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                binding:text="txtTotalNum" />
+                            
+                            <TextView
+                                android:id="@+id/lblInspectedNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已安检："
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txtInspectedNum"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                binding:text="txtInspectedNum" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="拒访："
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txtDeniedNum"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                binding:text="txtDeniedNum" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="无人："
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txtNoAnswerNum"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                binding:text="txtNoAnswerNum" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="维修："
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txtNeedFixNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                binding:text="txtNeedFixNum" />
+
+    </LinearLayout>
+
+</LinearLayout>

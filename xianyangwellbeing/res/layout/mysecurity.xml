@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/myanjian_bgimage"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="18dp"
+        android:text="我的安检"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="465dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="470dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="  地址"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="上传状态"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="  状态"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="325dp"
+                android:layout_height="405dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:divider="#d0cece"
+                android:dividerHeight="1dp"
+                binding:itemSource="plainList"
+                binding:itemTemplate="@layout/security_entry" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageViewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            binding:onClick="AllClicked"
+            binding:source="allImgId" />
+
+        <ImageView
+            android:id="@+id/imageViewYi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            binding:onClick="YiImgClicked"
+            binding:source="yiImgId" />
+        
+        <ImageView
+            android:id="@+id/ImageViewWei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            binding:onClick="WeiImgClicked"
+            binding:source="weiImgId" />
+      
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView
+            android:id="@+id/txtall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="全部"
+            android:textColor="#3A5FCD"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/txtViewYi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:text="已检"
+            android:textColor="#3A5FCD"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/txtViewWei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:text="未检"
+            android:textColor="#3A5FCD"
+            android:textSize="15sp" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+		<ImageView
+            android:id="@+id/imageViewJu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            binding:onClick="JuImgClicked"
+            binding:source="juImgId" />
+       
+        <ImageView
+            android:id="@+id/imageViewWu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            binding:onClick="WuImgClicked"
+            binding:source="wuImgId" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="42dp" >
+        
+        <TextView
+            android:id="@+id/txtViewJu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:text="拒签"
+            android:textColor="#3A5FCD"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/txtViewWu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:text="拒入"
+            android:textColor="#3A5FCD"
+            android:textSize="15sp" />
+        
+    </LinearLayout>
+
+</LinearLayout>

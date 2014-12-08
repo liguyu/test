@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+	<!-- BasePane -->
+    
+    <LinearLayout
+        android:id="@+id/basicPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/userinfo_bg"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="16dp"
+            android:text="用户基本信息"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+
+        	<LinearLayout
+            	android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+
+            	<LinearLayout
+                	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:orientation="horizontal" >
+
+                	<TextView
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:layout_marginLeft="5dp"
+                    	android:text="入户"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp" />
+                
+                	<Switch
+                    	android:id="@+id/f_ruhu"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:textColor="@color/white"
+                    	android:textOff="否"
+                    	android:textOn="是"
+                    	android:textSize="15sp"
+                    	binding:checked="f_ruhu" />
+
+                	<TextView
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="拒检"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp" />
+                	<Switch
+                    	android:id="@+id/f_jujian"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:textColor="@color/white"
+                    	android:textOff="否"
+                    	android:textOn="是"
+                    	android:textSize="15sp"
+                    	binding:checked="f_jujian" />
+                
+            	</LinearLayout>
+            
+            	<LinearLayout
+                	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:orientation="horizontal" >
+
+                	<TextView
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:layout_marginLeft="5dp"
+                    	android:text="已发到访不遇卡"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp" />
+                	<Switch
+                   		android:id="@+id/hasNotified"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:textColor="@color/white"
+                    	android:textOff="否"
+                    	android:textOn="是"
+                    	android:textSize="15sp"
+                    	binding:checked="hasNotified" />
+                
+            	</LinearLayout>
+            
+        	</LinearLayout>
+        	
+        </ScrollView>
+        
+    </LinearLayout>
+
+</LinearLayout>

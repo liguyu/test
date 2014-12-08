@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip" 
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        binding:text="Address" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100px"
+        android:layout_height="15px"
+        android:layout_marginLeft="10dp"
+        binding:progress="progress" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/uploadicon" 
+            binding:visibility="UPLOADED" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/uploadfail"
+            binding:visibility="UN_UPLOADED" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/weixiu_icon"
+            binding:visibility="REPAIR" />
+
+    </LinearLayout>
+   
+    </LinearLayout>

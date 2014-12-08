@@ -1,0 +1,3691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <!-- CheckMenuPane -->
+    
+    <LinearLayout
+        android:id="@+id/checkMenuPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <Button
+                android:id="@+id/btnUserInfoPane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/gonggaobtnbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="UserInfoPane" />
+
+            <Button
+                android:id="@+id/btnGasAppliancesPane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/anjianbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="GasAppliancesPane" />
+
+            <Button
+                android:id="@+id/btnTightnessPane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/wodebtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="TightnessPane" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lblUserInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="用户信息"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblGasDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="62dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="用气设备"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblMySafeCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="气密性"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnIndoorFacilitiesPane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/gonggaobtnbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="IndoorFacilitiesPane" />
+
+            <Button
+                android:id="@+id/btnGasEnvironmentPane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/anjianbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="GasEnvironmentPane" />
+
+            <Button
+                android:id="@+id/btnFaultPane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/wodebtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="FaultPane" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lblIndoorDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="户内设施"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblGasEnvironment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="62dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="用气环境"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblMeasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="计量"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnMeasurePane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/gonggaobtnbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="MeasurePane" />
+
+            <Button
+                android:id="@+id/btnAppraisalPane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/anjianbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="AppraisalPane" />
+
+            <Button
+                android:id="@+id/btnCameraPane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/wodebtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="CameraPane" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lblIndoorDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="户内设施"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblGasEnvironment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="62dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="用气环境"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblMeasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="计量"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnSignaturePane"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/gonggaobtnbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="SignaturePane" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lblIndoorDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="户内设施"
+                android:textColor="@color/black" />
+            
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <!-- UserInfoPane -->
+    
+    <LinearLayout
+        android:id="@+id/userInfoPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+        
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+        			<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="编         号:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        			
+        			<EditText
+       					android:id="@+id/securityid"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+            			binding:text="f_securityid" />
+        
+    				<Button
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="35dp"
+                    	android:layout_marginLeft="5dp"
+                    	android:text="扫描"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="SearchByScan" />
+    		
+        		</LinearLayout>
+        
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+           			android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="ID         号:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/userid"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+            			binding:text="f_userid" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="用户姓名:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/username"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+            			binding:text="f_username" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="回访电话:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/huifangtelephone"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:inputType="phone"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+            			binding:text="f_huifangtelephone" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="住         址:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/address"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+            			binding:text="f_address" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="安检日期:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/securitydate"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:inputType="date"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+            			binding:text="f_securitydate" />
+    		
+    			</LinearLayout>
+    			
+        		<LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+    				
+                	<Button
+                    	android:id="@+id/firstDownButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+
+            	</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- GasAppliancesPane -->
+    
+    <LinearLayout
+        android:id="@+id/gasAppliancesPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+        
+        		<LinearLayout
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        		    <CheckBox
+                        android:id="@+id/kitchen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="灶具"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_kitchen" />
+        		    
+        		</LinearLayout>
+        		
+        		<LinearLayout
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+        			<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="灶 具 品 牌 :"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/kitchenbrand"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_kitchenbrand" />
+    		
+        		</LinearLayout>
+        
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+           			android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="灶 具 容 量 :"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<Spinner
+                        android:id="@+id/kitchensize"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/white"
+                        binding:itemSource="f_kitchensize"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        		    <CheckBox
+                        android:id="@+id/waterheater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="热水器"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_waterheater" />
+        		    
+        		</LinearLayout>
+        		    
+        		<LinearLayout
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="热水器品牌:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/waterheaterbrand"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_waterheaterbrand" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="热水器容量:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+    				
+    				<EditText
+       					android:id="@+id/heatersize"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_heatersize" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        		    <CheckBox
+                        android:id="@+id/wallhangboiler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="壁挂炉"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_wallhangboiler" />
+        		    
+        		</LinearLayout>
+        		    
+        		<LinearLayout
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="壁挂炉品牌:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/wallhangboilerbrand"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_wallhangboilerbrand" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="壁挂炉容量:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/handboilersize"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_handboilersize" />
+    		
+    			</LinearLayout>
+    			
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="气 表 型 号 :"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/metertype"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_metertype" />
+    		
+    			</LinearLayout>
+    			
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="左    右   表 :"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/aroundmeter"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_aroundmeter" />
+    		
+    			</LinearLayout>
+    			
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="表            号:"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/meternum"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_meternumber" />
+    		
+    			</LinearLayout>
+    			
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="气 表 类 型 :"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/gasmeterstyle"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_gasmeterstyle" />
+    		
+    			</LinearLayout>
+    			
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="气 表 厂 家 :"
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/gaswatchbrand"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_gaswatchbrand" />
+    		
+    			</LinearLayout>
+    			
+        		<LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                	<Button
+                    	android:id="@+id/secondUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+
+            	</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- TightnessPane -->
+    
+    <LinearLayout
+        android:id="@+id/tightnessPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+        
+        		<LinearLayout
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        			<CheckBox
+                        android:id="@+id/isbtlq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="表体漏气"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbtlq" />
+    		
+        		</LinearLayout>
+        
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+           			android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        			
+        		    <CheckBox
+                        android:id="@+id/isfmlq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="阀门漏气"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isfmlq" />				
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/isgdjkclq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="管道接口处漏气"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isgdjkclq" />
+        		    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/ishnczlqxx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="如户内存在漏气现象，安检人员立即关闭表前阀，拨打96777报修"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_ishnczlqxx" />
+
+    			</LinearLayout>
+    			
+        		<LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                	<Button
+                    	android:id="@+id/thirdUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+
+            	</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- IndoorFacilitiesPane -->
+    
+    <LinearLayout
+        android:id="@+id/indoorFacilitiesPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+        
+        		<LinearLayout
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+
+    				<CheckBox
+                        android:id="@+id/issghnrqgd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="私改户内燃气管道"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_issghnrqgd" />
+    		
+        		</LinearLayout>
+        
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+           			android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/issqgg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="拨打96777申请改管"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_issqgg" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="包表"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbb" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="包管"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbg" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="包阀"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbf" />
+    		
+    			</LinearLayout>
+    	
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isktfk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="开通风孔，确保自然通风"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isktfk" />
+    		
+    			</LinearLayout>
+    			
+        		<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbtxs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="表体锈蚀"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbtxs" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isgdxs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="管道锈蚀"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isgdxs" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="拨打96777报修"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbx" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbqrlj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="表前软连接"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbqrlj" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbhrlj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="表后软连接"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbhrlj" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/islxwgs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="联系我公司燃气具服务中心整改，电话：029-33560008"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_islxwgs" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isrglh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="软管老化"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isrglh" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isrgcc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="软管超长"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isrgcc" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isrgcqdmc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="软管穿墙、地、门窗"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isrgcqdmc" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isrgwgk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="软管无管卡"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isrgwgk" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/islgwgk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="立杠无管卡"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_islgwgk" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isghrg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="更改软管"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isghrg" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isydrqj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="移动燃气具"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isydrqj" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iszxzg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自行整改"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszxzg1" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isrggkyff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="软管管卡已发放"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isrggkyff" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/issjrsq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="私接热水器"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_issjrsq" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/issjbgl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="私接壁挂炉"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_issjbgl" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isyjf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="私接羊角阀"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isyjf" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/issjrst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="私接软三通"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_issjrst" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/islxwgs1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="联系我公司燃气具服务中心整改，电话：02933560008"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_islxwgs1" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isgzzj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="改装灶具"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isgzzj" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isgzrsq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="改装热水器"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isgzrsq" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isccghrqj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="拆除、更换燃气具"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isccghrqj" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isrsqwyd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="热水器无烟道或烟道未伸出户外"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isrsqwyd" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isrsqgyyd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="热水器和油烟机共用烟道"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isrsqgyyd" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iszxzg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自行整改"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszxzg2" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbglwyd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="壁挂炉无烟道或烟道未伸出户外"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbglwyd" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isbglgyyd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="壁挂炉和油烟机共用烟道"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbglgyyd" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iszxzg3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自行整改"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszxzg3" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                	<Button
+                    	android:id="@+id/fourUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+
+            	</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- GasEnvironmentPane -->
+    
+    <LinearLayout
+        android:id="@+id/gasEnvironmentPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isczlzyshyhy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="存在两种以上火源混用"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isczlzyshyhy" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isycqthy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="移除其他火源"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isycqthy" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/issykfscf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="属于开发式厨房，厨房无隔断"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_issykfscf" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iscfdfzw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="厨房堆放杂物"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iscfdfzw" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isjiageduan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="在厨房与客厅加装隔断"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isjiageduan" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iszxzg6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自行整改"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszxzg6" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isgbcfyt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="改变厨房用途"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isgbcfyt" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isgbyqxz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="改变用气性质"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isgbyqxz" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/ishfcfyt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="恢复厨房用途"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_ishfcfyt" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isdgsdtsq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="到公司大厅申请"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isdgsdtsq" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/issymbkj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="厨房属于密闭空间或自然通风差"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_issymbkj" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isxyswlm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="电源与燃气管道净距离小于15cm"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isxyswlm" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isczdxcr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="存在电线缠绕"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isczdxcr" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isqbzrtf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自行整改，确保自然通风"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isqbzrtf" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iszxzg4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自行整改"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszxzg4" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iszjxysslm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="灶具立杠与燃器具水平净距离小于30cm"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszjxysslm" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isrsqxysslm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="热水器立杠与燃器具水平净距离小于30cm"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isrsqxysslm" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iszxzg5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自行整改"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszxzg5" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/islxwgs2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="联系燃气具服务中心整改33560008"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_islxwgs2" />
+    		
+    			</LinearLayout>
+    			
+    			<LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                	<Button
+                    	android:id="@+id/fiveUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+
+            	</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- FaultPane -->
+    
+    <LinearLayout
+        android:id="@+id/faultPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isjxsb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="机表死表"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isjxsb" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/issqbj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="输气不进"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_issqbj" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isqlbf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="气量不符"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isqlbf" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iscfck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="重复插卡"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iscfck" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isddbgf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="断电不关阀"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isddbgf" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/iszndq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="智能掉气"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszndq" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isyjxsgz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="液晶显示故障"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isyjxsgz" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isznbjq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="智能不减气"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isznbjq" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<CheckBox
+                        android:id="@+id/isqbczgz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="如存在故障，请保持电话畅通，我公司将在一周内进行维护"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isqbczgz" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="其他隐患"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/qtyh"
+                        android:layout_width="250dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:text="f_qtyh" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                	<Button
+                    	android:id="@+id/sixUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+
+            	</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- MeasurePane -->
+    
+    <LinearLayout
+        android:id="@+id/measurePane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="用  气  量："
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/oughtamount"
+                        android:layout_width="240dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:text="oughtamount" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="累购气量："
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/cumulativepurchase"
+                        android:layout_width="240dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        binding:text="f_cumulativepurchase" />
+    		
+    			</LinearLayout>
+
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="本次抄表指数"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/lastrecord"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="lastrecord" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="上次抄表指数"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/lastinputgasnum"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="lastinputgasnum" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="用气金额"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/oughtfee"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="oughtfee" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="气量差"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/qiliangcha"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="f_qiliangcha" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="气价类型"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/gaspricetype"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="f_gaspricetype" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="上期结余气量"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/zhyegas"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="f_zhyegas" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="上期欠费金额"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/mustpaygasfee"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="mustpaygasfee" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="上期欠费气量"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/mustpaygascount"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="mustpaygascount" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="气价"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/gasprice"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="f_gasprice" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="本期结余气量"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/bczhyegas"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="f_bczhyegas" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="应交金额"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/yjfee"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="yjfee" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="应交气量"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/yjgas"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        binding:text="yjgas" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="气表底数："
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/gasmeteraccomodations"
+                        android:layout_width="240dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:text="f_gasmeteraccomodations" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="液晶读数(卡表)："
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/yejingdushu"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:text="f_yejingdushu" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="本 次 入 户 日期："
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+       					android:id="@+id/bcrhrq"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:inputType="date"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+            			binding:text="f_bcrhrq" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                	<Button
+                    	android:id="@+id/sevenUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+
+            	</LinearLayout>
+
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- AppraisalPane -->
+    
+    <LinearLayout
+        android:id="@+id/appraisalPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+        	    
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/isjjrh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="拒入"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isjjrh" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/isjjqz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="拒签"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isjjqz" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+    				
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="备注"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+        	        
+        	        <EditText
+                        android:id="@+id/beizhu"
+                       	android:layout_width="300dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:text="f_beizhu" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/isaqcsxc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="1、是否对您家中进行以下安全常识宣传？1）人不离火； 2）随手关阀； 3）常开窗户；4）告知天然气服务电话号码96777；"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isaqcsxc" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/iszxjc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="2、是否对您家中天然气软管进行仔细检查?"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_iszxjc" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/isjlyhfzsjxjl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="3、是否用检漏仪或肥皂水对所有的燃气阀门和各管道接口处及其它燃气设施进行检漏，并教会您燃气泄漏后正确处理办法?"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isjlyhfzsjxjl" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/isffxczl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="4、是否对您发放宣传资料？"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isffxczl" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/isajyzxjc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="5、安检人员是否按照上述“序号1、2、3、4、5、6、7”七项检查内容进行细致检查，并对发现的问题及时告知您？"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isajyzxjc" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        	        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="请您对本次安检进行评价："
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+        	        
+        	    </LinearLayout>
+        	        
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/ismanyi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="满意"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_ismanyi" />
+        		    
+        		    <CheckBox
+                        android:id="@+id/isnotmanyi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="不满意"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isbumanyi" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        		    
+        		    <CheckBox
+                        android:id="@+id/isfzgd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="是否发整改单"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        binding:checked="f_isfzgd" />
+
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:visibility="gone"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="安全等级："
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+        
+    				<EditText
+       					android:id="@+id/anjianprivious"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_anjianprivious" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<TextView
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"
+            			android:layout_marginLeft="5dp"
+            			android:text="用户建议及意见："
+            			android:textColor="@color/black"
+            			android:textSize="15sp" />
+    				
+    			</LinearLayout>
+    				
+    			<LinearLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="5dp"
+            		android:orientation="horizontal" >
+        
+    				<EditText
+       					android:id="@+id/reconmegent"
+                        android:layout_width="300dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        binding:text="f_reconmegent" />
+    		
+    			</LinearLayout>
+    			
+        	    <LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                	<Button
+                    	android:id="@+id/eightUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+
+            	</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- CameraPane -->
+    
+    <LinearLayout
+        android:id="@+id/cameraPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+        	    
+        	    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image1"
+                            android:layout_width="104dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot1"
+                                android:layout_width="52dp"
+                                android:layout_height="38dp"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/clear1"
+                                android:layout_width="52dp"
+                                android:layout_height="38dp"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image2"
+                            android:layout_width="104dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot2"
+                                android:layout_width="52dp"
+                                android:layout_height="38dp"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/clear2"
+                                android:layout_width="52dp"
+                                android:layout_height="38dp"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image3"
+                            android:layout_width="104dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot3"
+                                android:layout_width="52dp"
+                                android:layout_height="35dp"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                            
+                            <Button
+                                android:id="@+id/clear3"
+                                android:layout_width="52dp"
+                                android:layout_height="35dp"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image4"
+                            android:layout_width="104dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot4"
+                                android:layout_width="52dp"
+                                android:layout_height="38dp"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/clear4"
+                                android:layout_width="52dp"
+                                android:layout_height="38dp"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image5"
+                            android:layout_width="104dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot5"
+                                android:layout_width="52dp"
+                                android:layout_height="38dp"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/clear5"
+                                android:layout_width="52dp"
+                                android:layout_height="38dp"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    
+                </LinearLayout>
+                
+                <LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                            
+                	<Button
+                    	android:id="@+id/nineUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+                	
+        		</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+  	
+    <!-- SignaturePane -->
+    
+    <LinearLayout
+        android:id="@+id/signaturePane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1"
+        	android:background="@drawable/titlebg"
+        	android:orientation="vertical" >
+        	
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:text="天然气用户户内安全检查情况告知单"
+            	android:textColor="@color/white"
+            	android:layout_gravity="center"
+            	android:textSize="20sp" />
+        	
+        </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        
+        	<LinearLayout
+          		android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:orientation="vertical" >
+                
+        	    <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginLeft="5dp"
+            		android:text="备注："
+            		android:textColor="@color/black"
+            		android:textSize="15sp" />
+        	    <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginLeft="5dp"
+            		android:text="1、对检查出的安全隐患或故障，请在相应的框内划“√”，未打“√”视为正常"
+            		android:textColor="@color/black"
+            		android:textSize="15sp" />
+        	    <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginLeft="5dp"
+            		android:text="2、用户对安检员的工作评价请在相应框内划“√”"
+            		android:textColor="@color/black"
+            		android:textSize="15sp" />
+        	    <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginLeft="5dp"
+            		android:text="3、请用户按照整改意见在三日内进行整改，若不整改责任自负"
+            		android:textColor="@color/black"
+            		android:textSize="15sp" />
+                
+        	    <TextView
+                	android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                	android:layout_marginLeft="15dp"
+                	android:layout_marginTop="10dp"
+                	android:text="客户签名:"
+                	android:textColor="@color/black"
+                	android:textSize="15sp" />
+
+            	<LinearLayout
+                	android:layout_width="fill_parent"
+                	android:layout_height="300dp"
+                	android:orientation="horizontal" >
+
+                	<ImageView
+                    	android:id="@+id/signPad"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="fill_parent"
+                    	android:layout_marginLeft="15dp"
+                    	android:layout_marginRight="15dp"
+                    	android:background="@color/blue"
+                    	binding:onClick="sign" />
+
+            	</LinearLayout>
+            
+            	<LinearLayout
+        	    	android:layout_width="wrap_content"
+        	    	android:layout_height="40dp"
+        	    	android:layout_gravity="center_horizontal"
+        	    	android:layout_marginTop="5dp"
+        	    	android:orientation="horizontal" >
+                	
+            	    <Button
+                    	android:id="@+id/tenUpButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="返回安检菜单"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="back" />
+        	    
+					<Button
+				    	android:id="@+id/saveButton"
+				    	android:layout_width="wrap_content"
+				    	android:layout_height="wrap_content"
+				    	android:text="保   存"
+				    	android:textColor="@color/black"
+				    	android:textSize="15sp"
+				    	binding:onClick="saveInspectionRecord" />
+
+                	<Button
+                    	android:id="@+id/uploadButton"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:text="上   传"
+                    	android:textColor="@color/black"
+                    	android:textSize="15sp"
+                    	binding:onClick="UploadInspectionRecord" />
+                
+            	</LinearLayout>
+    	
+        	</LinearLayout>
+        	
+        </ScrollView>
+    	
+  	</LinearLayout>
+    
+</LinearLayout>

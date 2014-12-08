@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:binding="http://www.gueei.com/android-binding/"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mainmenubg"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/loginUserName"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginRight="80dp"
+            android:gravity="right|bottom"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/NoticeTopTitleSize"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lblSystemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="移动安检系统"
+            android:textColor="@color/Logintext"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/Maintop" >
+
+            <Button
+                android:id="@+id/btnDownload"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_gravity="top|right"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/xiazaibtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="JobDown" />
+
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shangchuanbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="UpLoad" />
+
+            <Button
+                android:id="@+id/btnSitting"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shezhibtnxml"
+                android:gravity="top|right|end"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="Setup" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lblDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="65dp"
+                android:text="下载"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="73dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="上传"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblSitting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="设置"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnNotice"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/gonggaobtnbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="Notice" />
+
+            <Button
+                android:id="@+id/btnSafeCheckPlan"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/anjianbtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="BigAddress" />
+
+            <Button
+                android:id="@+id/btnMySafeCheck"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/wodebtnxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="MySecurity" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lblNotice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="公告"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblSafeCheckPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="62dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="安检计划"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblMySafeCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginBottom="@dimen/Mainbottom"
+                android:text="我的安检"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
